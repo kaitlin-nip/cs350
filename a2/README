@@ -1,0 +1,14 @@
+Kaiyik Nip Assignment 2 README file
+
+TO COMPILE: run command "make cs350sh"
+
+TO RUN: run command "./cs350sh"
+
+NOTES:
+1) I borrowed Professor Gopalan's signal_handler code to handle ctrl-c, so that if you press ctrl-c in subprocess, the parent process will catch it and not be interrupted.
+
+2) To exit shell, type command "exit" (because ctrl-c is caught)
+
+3) In order to list each finished subprocess once, I left finished subprocesses as zombies until "listjobs" is called. Then they are reaped.
+
+4) "fg" command does not support background execution, because its purpose is to bring a process to the foreground
